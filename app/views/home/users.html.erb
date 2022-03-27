@@ -1,0 +1,13 @@
+<h1>List Users</h1>
+
+<% @users.each do |person| %>
+    <br/><br/>
+    <a href="/<%= person.user_name %>">@<%= person.user_name %></a> <% person.email %> <% person.id %>
+    <br/>
+    <ul>
+    <% person.tweet.each do |tweets| %>
+        <li><%= tweets.description %></li> 
+    <% end %>    
+    
+    </ul>
+<% end %>
